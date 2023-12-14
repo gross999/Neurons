@@ -1,0 +1,6 @@
+Установка yolo:
+pip install ultralytics
+Обучение:
+yolo train model=yolov8s.pt data=animals.yaml workers=0 project=animals epochs=1000 batch=4
+Обнаружение:
+yolo predict model=animals/train/weights/best.pt source="datasets/animals/test2/*.jpg" conf=0.25
